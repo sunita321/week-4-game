@@ -1,4 +1,4 @@
- <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+
   var targetNumber = 53;
 
   $("#numberToGuess").text(targetNumber);
@@ -45,7 +45,8 @@
     counter += crystalValue;
 
     // All of the same game win-lose logic applies. So the rest remains unchanged.
-    alert("New score: " + counter);
+  document.getElementById('totalscore').innerHTML =  ("Your Total Score is: " + counter);
+
 
     if (counter === targetNumber) {
       alert("You win!");
