@@ -1,17 +1,24 @@
-
+//Variable to hold number total to guess
+  
   var targetNumber = Math.floor(Math.random() * ((120-19)+1) + 19);
 
   $("#numberToGuess").text(targetNumber);
 
   var counter = 0;
 
-  // Now for the hard part. Creating multiple crystals each with their own unique number value.
+  
+  // Create array for 4 crystals where each crystal has a random value between 1 and 12.
 
-  // We begin by expanding our array to include four options.
-  var numberOptions = [10, 5, 3, 1];
+  var numberOptions = [];
+  for (var i = 0, l = 12; i < 4; i++) 
+    {
+      numberOptions.push(Math.round(Math.random() * l))
+    };
+
 
   // Next we create a for loop to create crystals for every numberOption.
-  for (var i = 0; i < numberOptions.length; i++) {
+  for (var i = 0; i < numberOptions.length; i++) 
+  {
 
     // For each iteration, we will create an imageCrystal
     var imageCrystal = $("<img>");
@@ -21,7 +28,7 @@
     imageCrystal.addClass("crystalImage");
 
     // Each imageCrystal will be given a src link to the crystal image
-    imageCrystal.attr("src", "http://cdn.playbuzz.com/cdn/35910209-2844-45c0-b099-f4d82878d54f/00261fda-4062-4096-81fd-8cf96b9034e8.jpg");
+    imageCrystal.attr("src", "assets/images/jewel" + (i+1)+ ".jpg");
 
     // Each imageCrystal will be given a data attribute called data-crystalValue.
     // This data attribute will be set equal to the array value.
