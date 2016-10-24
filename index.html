@@ -9,7 +9,23 @@
 </head>
 <body>
 
-  <h1>Number to Guess: <span id="numberToGuess"></span></h1>
+  <div>
+    <h1>Crystals Collector Game</h1>
+  </div>
+
+  <p>You will be given a random number at the beginning of the game.
+
+  <p>There are 4 crystals below. Each crystal has a different value. Clicking on a crystal will add a specific amount of points to your total score.</p>
+
+  <p>To win you need to match your total score to the random number to guess. You lose if your total score goes above the random number to guess.</p>
+
+  <p>The value of each crystal is hidden until you click on it.</p>
+
+  <p>Each time the game starts, the values of each crystal will change.</p>
+
+  <div id="guessnumber">Number to Guess: <span id="numberToGuess"></span></div>
+
+
 
   <!-- Note that this div is now empty. We will fill it dynamically -->
   <div id="crystals">
@@ -18,9 +34,9 @@
   <span class="crystalImage">
   </span>
 
-  <h2 id="totalscore">Your Total Score is:</h2>
-  <h2 id="score">Wins: <span id="wins"></span></h2>
-  <h2 id="score">Losses: <span id="losses"></span></h2>
+  <h3 id="totalscore">Your Total Score is:</h3>
+  <h3 id="score">Wins: <span id="wins"></span></h3>
+  <h3 id="score">Losses: <span id="losses"></span></h3>
 
 
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js">

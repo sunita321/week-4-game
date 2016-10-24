@@ -1,7 +1,29 @@
-.crystalImage 
-	{
+.crystalImage {
 		width: 200px;
      	height: 200px;
       	
-      	
-	}
+}
+
+h1 {
+	font-size: 40px;
+	color: blue;
+	text-shadow: 2px 2px #00FFFF;
+	margin: 10px;
+}
+
+#guessnumber {
+	color: blue;
+	margin: 30px 0px 30px 20px;
+	
+
+
+}
+
+body {
+	background: url('../images/hexellence.png') fixed;
+}
+
+p{
+	width: 30%;
+	margin: 20px;
+}

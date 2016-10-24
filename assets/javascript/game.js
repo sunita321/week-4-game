@@ -39,7 +39,6 @@ function clickhandler()
   //updates score on click
   document.getElementById('losses').innerHTML = losses;
   document.getElementById('wins').innerHTML = wins;
-   // All of the same game win-lose logic applies. So the rest remains unchanged.
   document.getElementById('totalscore').innerHTML =  ("Your Total Score is: " + counter);
 }
 
