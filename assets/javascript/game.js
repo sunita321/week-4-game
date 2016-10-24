@@ -86,17 +86,13 @@ function setup ()
 
     // Lastly, each crystal image (with all it classes and attributes) will get added to the page.
     $("#crystals").append(imageCrystal);
-
     
   }
 
-
-
-
-// This time, our click event applies to every single crystal on the page. Not just one.
+// The click event applies to every single crystal on the page. Not just one.
 $(".crystalImage").on("click", clickhandler);
 
 }
 
-//initialize the game when the window loads
+//Initialize the game when the window loads
 window.onload = setup();
