@@ -1,3 +1,7 @@
+//Scores
+var wins = 0;
+var losses = 0;
+
 //Variable to hold number total to guess
   
   var targetNumber = Math.floor(Math.random() * ((120-19)+1) + 19);
@@ -39,7 +43,8 @@
   }
 
   // This time, our click event applies to every single crystal on the page. Not just one.
-  $(".crystalImage").on("click", function() {
+  $(".crystalImage").on("click", function() 
+  {
 
     // Determining the crystal's value requires us to extract the value from the data attribute.
     // Using the $(this) keyword specifies that we should be extracting the crystal value of the clicked crystal.
@@ -52,15 +57,26 @@
     counter += crystalValue;
 
     // All of the same game win-lose logic applies. So the rest remains unchanged.
-  document.getElementById('totalscore').innerHTML =  ("Your Total Score is: " + counter);
+    document.getElementById('totalscore').innerHTML =  ("Your Total Score is: " + counter);
 
 
-    if (counter === targetNumber) {
+
+    if (counter === targetNumber) 
+    {
+      wins++;
       alert("You win!");
     }
 
-    else if (counter >= targetNumber) {
+    else if (counter >= targetNumber) 
+    {
+      losses++;
       alert("You lose!!");
     }
 
+    
+
+    //updates score on click
+    document.getElementById('losses').innerHTML = losses;
+    document.getElementById('wins').innerHTML = wins;
+    
   });
