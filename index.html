@@ -4,16 +4,18 @@
   <title>Crystals Collector</title>
   <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-  
+  <!--Fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Days+One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Jacques+Francois+Shadow" rel="stylesheet">
 
 </head>
 <body>
 
-  <div>
-    <h1>Crystals Collector Game</h1>
-  </div>
+  
+  <h1>Crystals Collector Game</h1>
+  
 
-  <p>You will be given a random number at the beginning of the game.
+  <p>You will be given a random number at the beginning of the game.</p>
 
   <p>There are 4 crystals below. Each crystal has a different value. Clicking on a crystal will add a specific amount of points to your total score.</p>
 
@@ -21,29 +23,31 @@
 
   <p>The value of each crystal is hidden until you click on it.</p>
 
-  <p>Each time the game starts, the values of each crystal will change.</p>
+  <p>Each time the game starts, the values of each crystal will change and your score will reset to zero.</p>
 
-  <div id="guessnumber">Number to Guess: <span id="numberToGuess"></span></div>
+  <div id="guessnumber">Random Number to Guess:</div>
+  <span id="numberToGuess"></span>
 
+  <div class="scorestyle">Your Total Score is:</div>
+  <span id="totalscore"></span>
+  
+  <!-- Empty until win or loss message is triggered-->
+  <div class="scorestyle"><span id="statusMsg"></span></div>
 
+  <div class="scorestyle">Wins: <span id="wins"></span></div>
+  <div class="scorestyle">Losses: <span id="losses"></span></div>
+ 
+ 
+  <!-- Empty div to be filled dynamiclly-->
+  <div id="crystals"></div>
 
-  <!-- Note that this div is now empty. We will fill it dynamically -->
-  <div id="crystals">
-  </div>
+  <span class="crystalImage"></span>
 
-  <span class="crystalImage">
-  </span>
+  <!--Call JS and jQuery-->
 
-  <h3 id="totalscore">Your Total Score is:</h3>
-  <h3 id="score">Wins: <span id="wins"></span></h3>
-  <h3 id="score">Losses: <span id="losses"></span></h3>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 
-
-  <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js">
-  </script>
-
-  <script type="text/javascript" src="assets/javascript/game.js">
-  </script>
+  <script type="text/javascript" src="assets/javascript/game.js"></script>
 
 </body>
 </html>

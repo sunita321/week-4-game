@@ -24,14 +24,14 @@ function clickhandler()
   if (counter === targetNumber) 
   {
     wins++;
-    alert("You win!");
+    document.getElementById('statusMsg').innerHTML = ("You win!");
     setup();
   }
 
   else if (counter >= targetNumber) 
   {
     losses++;
-    alert("You lose!!");
+    document.getElementById('statusMsg').innerHTML = ("You lose!");
     setup();
   }
 
@@ -39,7 +39,7 @@ function clickhandler()
   //updates score on click
   document.getElementById('losses').innerHTML = losses;
   document.getElementById('wins').innerHTML = wins;
-  document.getElementById('totalscore').innerHTML =  ("Your Total Score is: " + counter);
+  document.getElementById('totalscore').innerHTML =  (counter);
 }
 
 function setup ()
@@ -47,7 +47,7 @@ function setup ()
   //set to zero on page load
   document.getElementById('losses').innerHTML = 0;
   document.getElementById('wins').innerHTML = 0;
-  document.getElementById('totalscore').innerHTML =  ("Your Total Score is: " + 0);
+  document.getElementById('totalscore').innerHTML =  (0);
   
   counter = 0;
   //Variable to hold number total to guess
